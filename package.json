@@ -1,0 +1,14 @@
+{
+  "name": "node-crash-course",
+  "version": "1.0.0",
+  "description": "This is a small crash course on node.",
+  "main": "app.js",
+  "scripts": {
+    "develop" : "nodemon http.js"
+  },
+  "author": "Yosvaldy",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
