@@ -11,14 +11,14 @@ const server = http.createServer((req, res) => {
         });
     }
     else if(req.url === '/about') {
-        fs.readFile(path.join(__dirname, 'about.html'), (err, data) => {
+        fs.readFile(path.join(__dirname, 'views/about.html'), (err, data) => {
             res.writeHead(200, {'Content-Type': 'text/html'});
             res.write(data);
             res.end();
         });
     }
     else if(req.url === '/contact') {
-        fs.readFile(path.join(__dirname, 'contact.html'), (err, data) => {
+        fs.readFile(path.join(__dirname, 'views/contact.html'), (err, data) => {
             res.writeHead(200, {'Content-Type': 'text/html'});
             res.write(data);
             res.end();
@@ -28,7 +28,7 @@ const server = http.createServer((req, res) => {
         // res.writeHead(404, {'Content-Type': 'text/html'});
         // res.write(`<h1>Page NOT FOUND!</h1>`);
         // res.end();
-        fs.readFile(path.join(__dirname, 'not-found.html'), (err, data) => {
+        fs.readFile(path.join(__dirname, 'views/not-found.html'), (err, data) => {
             res.writeHead(200, {'Content-Type': 'text/html'});
             res.write(data);
             res.end();
